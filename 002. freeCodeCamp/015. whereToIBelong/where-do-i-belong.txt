@@ -1,0 +1,32 @@
+function getIndexToIns(arr, numG) {
+    arr.sort(function (a, b) {
+        return a - b;
+    })
+
+    var lessThanArr = [];
+    var graterThanArr = [];
+    for (let i = 0; i < arr.length; ++i) {
+        if (numG > arr[i]) {
+            lessThanArr.push(arr[i]);
+        } else {
+            graterThanArr.push(arr[i]);
+        }
+    }
+    let lIndex = lessThanArr[lessThanArr.length - 1];
+    let gIndex = graterThanArr[0];
+
+    let lowNum = arr.indexOf(lIndex);
+    let high = arr.indexOf(gIndex);
+
+    if (high < 0) {
+        high = lowNum + 1;
+    }
+    if (lowNum < 0) {
+        lowNum = 0;
+    }
+    // console.log(lowNum);
+    console.log(high);
+    return high;
+}
+
+getIndexToIns([40, 60], 50);
