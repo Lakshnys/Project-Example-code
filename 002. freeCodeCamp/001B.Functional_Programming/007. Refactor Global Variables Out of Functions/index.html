@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refactor Global Variables Out of Functions</title>
+</head>
+
+<body>
+    <h1 style="background-color:tomato; text-align:center;font-family:monaco-monospace ">Refactor Global Variables Out of Functions</h1>
+    <ul>
+        <li style="padding-bottom: 1rem; font-family:monaco-monospace; font-size: 5.2mm;">
+            1) <b>Don't alter a variable or object</b> - create new variables and objects and return them if need be from a
+            function.
+        </li>
+        <li style="padding-bottom: 1rem; font-family:monaco-monospace;font-size: 5.2mm;">
+            2) <b>Function arguments</b> - any computation inside a function depends only on the arguments, and not on
+            any global object or variable.
+        </li>
+        <hr>
+        <li style="padding-bottom: 1rem; font-family:monaco-monospace;font-size: 5.2mm;">
+            Adding one to a number is not very exciting, but we can apply these principles when working with arrays or
+            more complex objects.
+        </li>
+        <hr>
+    </ul>
+    <p style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 4.5mm; padding-left: 2.5rem;">
+        Rewrite the code so the global array bookList is not changed inside either function. The add function should add the given bookName to the end of the array passed to it and return a new array (list). The remove function should remove the given bookName from the array passed to it.
+    </p>
+    <br>
+    <p style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 4.5mm; padding-left: 2.5rem;">
+        <b>Note:</b> Both functions should return an array, and any new parameters should be added before the bookName parameter.
+    </p>
+    <script src="RefactorGlobalVariablesOutOfFunctions.js"></script>
+</body>
+</html>
