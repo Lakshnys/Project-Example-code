@@ -54,8 +54,8 @@ a specific type of tea).
  };
  
  // Only change code below this line
- const tea4GreenTeamFCC = 10;
- const tea4BlackTeamFCC = 30;
+ const tea4GreenTeamFCC = getTea(prepareGreenTea, 27);
+ const tea4BlackTeamFCC = getTea(prepareBlackTea, 13);
  // Only change code above this line
  
  console.log(
