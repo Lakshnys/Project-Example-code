@@ -4,14 +4,9 @@ var s = [23, 65, 98, 5, 8, 95];
 TODO: 
 
 Array.prototype.myFilter = function (callback) {
-    // callback loading here
-    /*
-  // funtion(function(item){
-  return item % 2 === 1;
-  })
-  */
-    // Only change code below this line
+
     var newArray = [];
+    
     this.forEach((element) => {
         if (callback(element)) {
             // callback function called here for execution since the called function accepted arrugument so "element"
@@ -26,8 +21,10 @@ var new_s = s.myFilter(function (item) {
     // return item > 50;
 });
 
-
 console.log(new_s);
+
+
+
 //   for (let i = 0; i < this.length; ++i){
 //      if(this[i] % 2 === 1){
 //          newArray.push(this[i]);
