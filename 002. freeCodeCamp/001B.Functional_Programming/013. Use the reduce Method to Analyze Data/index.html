@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Use the reduce Method to Analyze Data</title>
+</head>
+<body>
+    <div class = "div2">
+        <h2 class="hd2">Use the reduce Method to Analyze Data</h2>
+    </div>
+    <div class = "div1">
+        <h2 class = hd2> JavaScript - Reduce</h1>
+    </div>
+    <div class =  "container">
+        <div  class = "element">
+            <p>Array.prototype.reduce(), or simply reduce(), is the most general of all array operations in JavaScript. You can solve almost any array processing problem using the reduce method.
+            <br>
+            The reduce method allows for more general forms of array processing, and it's possible to show that both filter and map can be derived as special applications of reduce. The reduce method iterates over each item in an array and returns a single value (i.e. string, number, object, array). This is achieved via a callback function that is called on each iteration.
+            </p>
+        </div>
+        <div  class = "element">
+            <p>The callback function accepts four arguments. The first argument is known as the accumulator, which gets assigned the return value of the callback function from the previous iteration, the second is the current element being processed, the third is the index of that element and the fourth is the array upon which reduce is called.
+            </p>
+        </div>
+        <div  class = "element">
+            <p>In addition to the callback function, reduce has an additional parameter which takes an initial value for the accumulator. If this second parameter is not used, then the first iteration is skipped and the second iteration gets passed the first element of the array as the accumulator.
+            </p>
+        </div>
+    </div>
+    <!-- <br> -->
+    <div class = "div1">
+        <h2 class = hd2> Challange </h1>
+            <p class = "p2">
+                The variable watchList holds an array of objects with information on several movies. Use reduce to find the average IMDB rating of the movies directed by <b>Christopher Nolan.</b> Recall from prior challenges how to filter data and map over it to pull what you need. You may need to create other variables, and return the average rating from getRating function. Note that the rating values are saved as strings in the object and need to be converted into numbers before they are used in any mathematical operations.
+            </p>
+    </div>
+
+    <script src = "reduce_copy.js"></script>
+</body>
+</html>
