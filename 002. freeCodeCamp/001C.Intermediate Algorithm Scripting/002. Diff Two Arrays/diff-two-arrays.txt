@@ -1,0 +1,46 @@
+let diffArr1 = [];
+let diffArr2 = [];
+let newArr = [];
+function diffArray(arr1, arr2) {
+  // console.log(arr1.length);
+  // console.log(arr2.length);
+  let newArr1 = [];
+  let newArr2 = [];
+  if( arr1.length >= arr2.length){
+      newArr1 = arr2;
+      newArr2 = arr1;
+  } else {
+    newArr1 = arr1;
+    newArr2 = arr2;
+  }
+  
+    for(let key in newArr1){
+       let a = newArr1[key];
+        if (newArr2.indexOf(a) < 0) {
+            diffArr1.push(a);
+        }
+    }
+    for(let key in newArr2){
+        let b = newArr2[key];
+        if (newArr1.indexOf(b) < 0) {
+            diffArr2.push(b);
+        }
+    }
+    // if (diffArr1.length > diffArr2.length) {
+        for (let key in diffArr2) {
+            diffArr1.push(diffArr2[key]);
+        // }
+    }
+    for(let key in diffArr1){
+      if(newArr.indexOf(diffArr1[key])  < 0 ){
+          newArr.push(diffArr1[key]);
+      }
+          }
+    // console.log(diffArr1.indexOf(9));
+    console.log(newArr);
+    // console.log(diffArr1);
+    // console.log(diffArr2);
+    // console.log(x)
+    return newArr;
+}
+console.log(diffArray(["andesite", "grass", "dirt", "dead shrub"], ["andesite", "grass", "dirt", "dead shrub"])); // ["diorite", "pink wool"]
