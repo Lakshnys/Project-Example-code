@@ -1,0 +1,27 @@
+function myReplace(str, before, after) {
+    console.log(str);
+    let beforeSplit = before.split("");
+    let afterSplit = after.split("");
+    let x;
+    // console.log(beforeSplit[0]);
+    // console.log(afterSplit[0]);
+    // console.log(/[A-Z]/.test(afterSplit[0]));
+    if (/[A-Z]/.test(beforeSplit[0]) === /[A-Z]/.test(afterSplit[0])) {
+        x = afterSplit.join("");
+    } else if (/[A-Z]/.test(afterSplit[0]) === true) {
+        let afterShift = afterSplit.shift();
+        afterSplit.unshift(afterShift.toLowerCase());
+        x = afterSplit.join("");
+    } else {
+        let afterShift = afterSplit.shift();
+        afterSplit.unshift(afterShift.toUpperCase());
+        x = afterSplit.join("");
+    }
+    const regex = new RegExp(before, "g");
+    // console.log(regex);
+    const result = str.replace(regex, x);
+    console.log(result);
+    console.log("**********----------************");
+    return result;
+}
+myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
