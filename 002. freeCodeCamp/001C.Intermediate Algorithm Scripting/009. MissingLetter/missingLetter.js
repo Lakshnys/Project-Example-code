@@ -1,0 +1,35 @@
+console.log(123);
+function fearNotLetter(str) {
+    // console.log(str);
+    let m = [];
+    for (let k in str) {
+        m.push(str.charCodeAt(k));
+        // console.log(m);
+        // console.log(str.charCodeAt(k));
+    }
+    console.log(m);
+    let intIndex;
+    let nxtIndex;
+    let misLetter;
+    for (let k in m) {
+        //  console.log( m[Number(k)+1] - m[Number(k)] === 2);
+        if (m[Number(k) + 1] - m[Number(k)] > 1) {
+            // console.log(k);
+            intIndex = k;
+            nxtIndex = Number(k) + 1;
+            // console.log(intIndex);
+            // console.log(nxtIndex);
+            // console.log(String.fromCharCode(m[k] + 1));
+            misLetter = String.fromCharCode(m[k] + 1);
+            // console.log(misLetter);
+            return misLetter;
+        } 
+    }
+}
+
+console.log(fearNotLetter("abde"));
+// console.log(fearNotLetter("efgijkl"));
+
+// let a = "az";
+//   console.log(String.fromCharCode(97, 122));
+//   console.log(a.charCodeAt(0));
