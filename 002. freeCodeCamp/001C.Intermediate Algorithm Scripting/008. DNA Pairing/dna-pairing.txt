@@ -1,0 +1,28 @@
+function pairElement(str) {
+
+        let arrLen = str.length;
+        console.log(arrLen);
+        console.log(str);
+
+        let strSplit = str.split("");
+        console.log(strSplit);
+        let b = [];
+        strSplit.forEach(el => {
+          let a = [];
+
+         if(el === "G"){
+            a.push(el, "C");
+          } else if( el === "C"){
+            a.push(el, "G");
+          } else if( el === "A"){
+            a.push(el, "T");
+          } else if( el === "T"){
+            a.push(el, "A")
+          };
+          console.log(a);
+          b.push(a);
+        });
+        console.log(b);
+    return b;
+  }
+pairElement("GCG");
