@@ -1,0 +1,22 @@
+function sumFibs(num) {
+    console.log(num);
+    let intArr = [1,1];
+    let fibArr = [];
+    for(let k = 0; k < num; k++){
+        if((intArr[k] + intArr[Number(k)+1]) <= num){
+        intArr.push((intArr[k] + intArr[Number(k)+1]))};
+    }
+    // console.log(intArr);
+    for(let k in intArr){
+      //  console.log( intArr[k] % 2 > 0);
+       if( intArr[k] % 2 > 0){
+         fibArr.push(intArr[k]);
+       }
+      //  console.log(fibArr);
+       }
+       let d = (a, b) => a + b;
+       let sumNum = fibArr.reduce(d);
+       console.log(sumNum);
+    return sumNum;
+  }
+sumFibs(4);
