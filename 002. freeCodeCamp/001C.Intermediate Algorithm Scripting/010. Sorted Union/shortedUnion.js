@@ -1,7 +1,7 @@
-function uniteUnique(arr){
-    // console.log(arguments[2]);
+function uniteUnique(...arr){
+    console.log(arr);
     var unit = [];
-    var a = Array.from(arguments);
+    var a = arr;
     for(let k in a){
         // console.log(a[k]);
         a[k].forEach((el) =>{
